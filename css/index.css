@@ -1,0 +1,176 @@
+﻿/*исключение разницы восприятия браузерами ширины и высоты объекта*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #010202;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  width: 90%;
+  max-width: 1146px;
+  margin: auto;
+  padding: 56px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: block;
+}
+
+.user-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+}
+
+.user-name {
+  color: #fff;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.app {
+  background: linear-gradient(
+    90deg,
+    #010202 0%,
+    #010202 43%,
+    rgba(1, 2, 2, 0.2) 90.9%
+  );
+  min-height: 100vh;
+  color: #fff;
+}
+
+.film {
+  width: 90%;
+  max-width: 1146px;
+  margin: auto;
+  padding: 7px 0;
+}
+
+.description {
+  max-width: 460px;
+  font-size: 21px;
+  line-height: 140%;
+  margin-bottom: 36px;
+}
+
+.tags {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  font-size: 16px;
+  line-height: 140%;
+  color: #e5e5e5;
+  opacity: 0.4;
+}
+
+/*применим ко всем внутренним элементам класса*/
+.tags > * {
+  margin-right: 15px;
+  margin-bottom: 10px;
+}
+
+.age {
+  border: 1px solid #ffffff;
+  border-radius: 2px;
+  box-sizing: 2px;
+  padding: 1px 5px;
+}
+
+.button-default img {
+  width: 12px;
+}
+
+.button {
+  padding: 11px 26px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  line-height: 140%;
+  background: #2f2f2f;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button-primary {
+  background: #ea6e20;
+  margin-right: 15px;
+}
+
+.button-text {
+  margin-left: 10px;
+  vertical-align: text-bottom;
+}
+
+#hidden-content {
+  border-radius: 20px;
+  background-color: #010202c7;
+  text-align: center;
+}
+#hidden-content input {
+  margin-bottom: 20px;
+}
+.email-h {
+  display: block;
+  font-size: 22px;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .app {
+    height: auto;
+    padding-bottom: 400px;
+    /*через слеш размер картинки*/
+    background: url('../img/cover-image.svg') no-repeat bottom center / 300px;
+  }
+  /*отключение видео*/
+  video {
+      display: none;
+  }
+  .film {
+    padding-top: 2%;
+  }
+  .description {
+    font-size: 16px;
+    max-width: 333px;
+  }
+  .film-img {
+    max-width: 100%;
+  }
+  .user-name {
+    display: none;
+  }
+  #hidden-content {
+     max-width: 100%;
+     padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .button-text {
+    display: none;
+  }
+  .app {
+    padding-bottom: 350px;
+    background-size: 350px;
+  }
+  .button {
+    margin-bottom: 10px;
+  }
+}
